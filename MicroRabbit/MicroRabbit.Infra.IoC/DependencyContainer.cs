@@ -14,7 +14,7 @@ namespace MicroRabbit.Infra.IoC
         public static void Register(IServiceCollection services)
         {
             //Domain Bus
-            services.AddTransient<IEventBus, RabbitMQBus>();
+            //services.AddTransient<IEventBus, RabbitMQBus>();
 
             //Application services
             services.AddTransient<IAccountService, AccountService>();
@@ -22,7 +22,7 @@ namespace MicroRabbit.Infra.IoC
             //Data
 
             services.AddTransient<IAccountRepository, AccountRepository>();
-            services.AddTransient<BankingDbContext>();
+            //services.AddTransient<BankingDbContext>();
         }
     }
 }
